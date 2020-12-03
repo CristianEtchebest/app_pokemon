@@ -17,5 +17,9 @@ Projeto criado com o objetivo treinar habilidades em gerenciamento de APIs utili
 ### Comandos para a execução do projeto em localhost. 
 - mkdir projetos
 - cd projetos/
-- composer creat-project laravel/laravel app_pokemon "5.8.0"
-- composer require guzzlehttp/guzzle
+- git clone
+- cd app_pokemon
+- composer install
+- cp .env.exemple .env
+- php artisan key:generate
+- php artisan serve 

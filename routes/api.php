@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('listar',[\App\Http\Controllers\PokemonsController::class, 'listar']);
+Route::get('/listar/{id?}','PokemonsController@pkList')->where('id','[0-9]+');
 
