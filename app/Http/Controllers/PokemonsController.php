@@ -13,9 +13,9 @@ class PokemonsController extends Controller
         $client =  new Client(['base_uri' => env('BASE_URI'),'timeout' => 2.0]);
         if($id):
             $resposne = $client->request('GET', 'pokemon/'.$id);
-        else:
-            $resposne = $client->request('GET', 'pokemon');
+            return json_decode($resposne->getBody(), true);
         endif;
+        $resposne = $client->request('GET', 'pokemon');
         return json_decode($resposne->getBody(), true);
     }
 }
